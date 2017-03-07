@@ -61,7 +61,7 @@
 	//String keyword=request.getParameter("keyword");
 	Class.forName("oracle.jdbc.OracleDriver");
 	//out.println("创建驱动成功！");
-	conn=DriverManager.getConnection("jdbc:oracle:thin:@localhost:1521:SEARCH","manager","ctg96676");
+	conn=DriverManager.getConnection("jdbc:oracle:thin:@localhost:1521:SEARCH","manager","123456");
 	//out.println("连接数据库成功！");
 	
 	String sql="select SIGHT.SIGHTNUM as SIGHTNUM, CITY.CNNAME as CITYNAME, SIGHT.CNNAME as CNNAME, SIGHT.ENNAME as SENNAME, SIGHT.SCORE as SCORE from CITY join SIGHT on CITY.CITYNUM=SIGHT.CITYNUM where CITY.CNNAME=? or CITY.ENNAME=? order by SIGHT.SCORE desc";
