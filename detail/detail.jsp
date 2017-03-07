@@ -17,7 +17,7 @@
 	try{
 	Class.forName("oracle.jdbc.OracleDriver");
 	//out.println("创建驱动成功！");
-	conn=DriverManager.getConnection("jdbc:oracle:thin:@localhost:1521:SEARCH","manager","ctg96676");
+	conn=DriverManager.getConnection("jdbc:oracle:thin:@localhost:1521:SEARCH","manager","123456");
 	//out.println("连接数据库成功！");
 	String sql="select CNNAME,ENNAME,DSCR,SCORE,ADDRESS,MAPURL,PICURL1,PICURL2,PICURL3,PICURL4,PICURL5 from SIGHT where SIGHTNUM=?";
 	pstmt=conn.prepareStatement(sql);
